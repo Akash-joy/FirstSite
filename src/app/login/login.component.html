@@ -1,0 +1,14 @@
+
+<div class="container">
+    <form  [formGroup]="loginForm" (ngSubmit)="save()" >
+    <label>USERNAME:</label><input type="text" formControlName="Username" ><br><br>
+    <label>PASSWORD:</label><input type="password" formControlName="password" ><br><br> 
+    <div *ngIf="loginForm.invalid && loginForm.touched" class="error-message ">
+       <small>Please enter both username and password.</small> 
+      </div>
+      <div class="button">
+    <button type="submit" [disabled]="loginForm.invalid"  >login</button>
+    <button [disabled]="! isLoggedIn" (click)="logout()" >logout</button>
+  </div>
+</form>
+</div>

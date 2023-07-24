@@ -1,0 +1,51 @@
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1978d2;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start; 
+  font-weight: bolder;
+}
+.angular a{
+  display: flex;
+  color: white;
+  padding: 4px 68px; 
+  text-decoration: none;
+  font-size: xx-large;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; 
+}
+
+.nav-item a {
+  display: block;
+  color: white;
+  padding: 10px 16px; 
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  
+}
+
+.search-bar input{
+  padding: 6px ;
+  justify-content: flex-end;
+}
+.search-bar{
+  padding: 4px 584px; 
+}
+ button {
+  padding: 8px 16px; 
+  border: none;
+  margin-left: 8px; 
+ 
+}
