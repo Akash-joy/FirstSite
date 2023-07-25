@@ -15,22 +15,20 @@ loginForm=new FormGroup({
   password:new FormControl('',[Validators.required])
 })
 
-save(){
+save(){ 
  const username= this.loginForm.value.Username
 const password=this.loginForm.value.password
-  this.router.navigate(['/']);
+ 
   if (username !== null && username !== undefined && password !== null && password !== undefined) {
     localStorage.setItem('username', username);
     localStorage.setItem('password', password);
+    this.router.navigate(['/app-chapter-one']);
   }
 }
-ngOnInit() {
+ngOnInit() { 
   const storedUsername = localStorage.getItem('username');
   this.isLoggedIn =!!storedUsername;
-  
+ 
 }
-logout(){
-  localStorage.removeItem('username');
-  this.isLoggedIn = false;
-}
+
 }
