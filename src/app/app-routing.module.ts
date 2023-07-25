@@ -18,9 +18,9 @@ const routes: Routes = [
   {path:'app-community',component:COMMUNITYComponent},
   {path:'app-blog',component:BLOGComponent},
   {path:'app-chapter-one',component:ChapterOneComponent },
-  {path:'app-chapter-two',component:ChapterTwoComponent, canActivate: [AuthGuard]},
+  {path:'app-chapter-two',component:ChapterTwoComponent, canActivate:[AuthGuard]},
   {path:'app-login',component:LoginComponent,},
-  { path: '', redirectTo: '/Angular', pathMatch: 'full' }
+  { path: '', redirectTo: '', pathMatch: 'full' }
   
  
 ];
