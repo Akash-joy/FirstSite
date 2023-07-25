@@ -18,6 +18,17 @@ export class NavBarComponent {
     this.checkboxService.setCheckboxState(this.showCheckbox);
   }
 
+  ngOnInit() {
+    const storedUsername = localStorage.getItem('username');
+    this.isLoggedIn =!!storedUsername;
+  
+  }
+  logout(){
+    localStorage.removeItem('username');
+  localStorage.removeItem('password');
 
- 
+    this.isLoggedIn = false;
+   
 }
+  }
+  

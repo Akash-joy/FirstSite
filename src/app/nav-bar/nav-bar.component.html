@@ -6,11 +6,10 @@
   <div class="nav-item"><a routerLink="/app-chapter-one" (click)="showcheck=true">DOCS</a></div>
   <div class="nav-item"><a routerLink="/app-community" (click)="showcheck=false">COMMUNITY</a></div>
   <div class="nav-item"><a routerLink="/app-blog"  (click)="showcheck=false">BLOG</a></div>
-  <div class="nav-item"><a routerLink="/app-login"  (click)="showcheck=false">login/logout</a></div>
-  <div class="search-bar">
-     <input type="text" placeholder="Search..."/>
-    <button >Search</button>
-  </div>
+
+  <div class="button"><button [disabled]=!isLoggedIn  (click)="logout()"  >logout</button></div>
+  
+  
 </div>
 <router-outlet> </router-outlet>
 

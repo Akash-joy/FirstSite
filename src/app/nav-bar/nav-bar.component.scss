@@ -26,26 +26,13 @@
 .nav-item a {
   display: block;
   color: white;
-  padding: 10px 16px; 
+   
   text-decoration: none;
 }
 
-.search-bar {
+.button{
+  margin-left: 57%;
   display: flex;
   align-items: center;
-  
 }
 
-.search-bar input{
-  padding: 6px ;
-  justify-content: flex-end;
-}
-.search-bar{
-  padding: 4px 584px; 
-}
- button {
-  padding: 8px 16px; 
-  border: none;
-  margin-left: 8px; 
- 
-}
