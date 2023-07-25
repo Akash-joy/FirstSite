@@ -16,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 
 import { ForcheckboxService } from './forcheckbox.service';
 import { LoginComponent } from './login/login.component';
+import { LayoutComponent } from './layout/layout.component';
+import { LoginLayoutComponent } from './login-layout/login-layout.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { LoginComponent } from './login/login.component';
     ChapterTwoComponent,
     FooterComponent,
     LoginComponent,
+    LayoutComponent,
+    LoginLayoutComponent,
     
   ],
   imports: [

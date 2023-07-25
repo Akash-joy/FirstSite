@@ -1,5 +1,6 @@
 
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,9 +8,13 @@ import { Component} from '@angular/core';
   templateUrl: './docs.component.html',
   styleUrls: ['./docs.component.scss']
 })
-export class DOCSComponent {
+export class DOCSComponent implements OnInit{
+  constructor(private router:Router){}
+  ngOnInit(): void {
+    this.router.navigateByUrl('/app-chapter-one');
+  }
   
-  searchitem: string = '';
+  
 
   
 
