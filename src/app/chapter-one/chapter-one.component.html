@@ -1,5 +1,8 @@
 <div class="container">
-    
+    <div class="search">
+        <input type="search" #searchInput>
+        <button (click)="searchElement(searchInput.value)">Search</button>
+    </div>
 
     <div id="Chapter-one" >
         <h1>Chapter One</h1>

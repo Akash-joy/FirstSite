@@ -1,4 +1,8 @@
 <div class="container">
+    <div class="search">
+        <input type="search" #searchInput>
+        <button (click)="searchElement(searchInput.value)">Search</button>
+    </div>
 <div id="chapter2">
     <h1>Chapter Two</h1>
     <p>Code that defines how to render the view of a component.</p>
