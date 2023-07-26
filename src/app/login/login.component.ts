@@ -30,5 +30,4 @@ ngOnInit() {
   this.isLoggedIn =!!storedUsername;
  
 }
-
 }

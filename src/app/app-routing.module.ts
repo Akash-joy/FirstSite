@@ -15,7 +15,7 @@ import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   
-  {path:'',component:LayoutComponent ,children:[
+  {path:'',component:NavBarComponent ,children:[
     {path:'app-angular',component:AngularComponent},
     {path:'app-docs',component: DOCSComponent  },
       {path:'app-chapter-one',component:ChapterOneComponent },

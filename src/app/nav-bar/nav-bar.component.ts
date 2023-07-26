@@ -7,7 +7,7 @@ import { ForcheckboxService } from '../forcheckbox.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {  
-  searchTerm: string = '';
+ 
   showCheckbox: boolean = true;
   showcheck:boolean=false
   isLoggedIn: boolean=false
@@ -25,7 +25,7 @@ export class NavBarComponent {
   }
   logout(){
     localStorage.removeItem('username');
-  localStorage.removeItem('password');
+   localStorage.removeItem('password');
 
     this.isLoggedIn = false;
    
