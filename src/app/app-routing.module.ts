@@ -26,7 +26,7 @@ const routes: Routes = [
   ]},
   { path: 'app-login', component: LoginComponent },
 
-  { path: '**', redirectTo: '/app-login' },
+  { path: '**', redirectTo: '/app-angular' },
  
 ];
 
