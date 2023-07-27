@@ -4,6 +4,7 @@
 .multiselect-dropdown {
   position: relative;
   display: inline-block;
+  
 }
 
 .dropdown-toggle {
@@ -28,4 +29,13 @@
 }
 .content{
   margin-top: 140px;
+}
+.justdrop select{
+  border: none;
+}
+
+
+
+.selectors{
+  display: flex;
 }

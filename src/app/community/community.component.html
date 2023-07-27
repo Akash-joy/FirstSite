@@ -1,21 +1,31 @@
 <div class="container">
+    <div class="selectors">
 
+       <div class="justdrop">
+         <select (change)="onOptionSelected($event)">
+             <option value="forchapter">Chapter 2</option>
+             <option value="fornothing">Nothing </option>
+             <option value="forsomething">something </option>
+             <option value="forIntroduction">Introduction </option>
+         </select>
+       </div>
 
-    <div class="multiselect-dropdown">
-        <div class="dropdown-toggle" (click)="toggleDropdown()">Select Options</div>
-        <div class="dropdown-menu" [hidden]="!showDropdown">
-           <label>
-            <input type="checkbox"  [(ngModel)]="selectAll" (change)="onSelectAll()">Select All
-           </label>
-          <label *ngFor="let option of options" class="option">
-            <input type="checkbox" [(ngModel)]="option.selected" (change)="onOptionChange()"> {{ option.label }}
-          </label>
+        <div class="multiselect-dropdown">
+         <div class="dropdown-toggle" (click)="toggleDropdown()">Chapter contents</div>
+           <div class="dropdown-menu" [hidden]="!showDropdown">
+             <label>
+               <input type="checkbox"  [(ngModel)]="selectAll" (change)="onSelectAll()">Select All
+             </label>
+             <label *ngFor="let option of options" class="option">
+               <input type="checkbox" [(ngModel)]="option.selected" (change)="onOptionChange()"> {{ option.label }}
+            </label>
+         </div>
         </div>
-      </div>
-     
+
+    </div>
       
       <div class="content">
-        <div id="option1" *ngIf="options[0].selected">
+        <div id="option1" *ngIf="selectedOption === 'forchapter' && options[0].selected">
        
           <h1>Chapter Two</h1>
           <p>Code that defines how to render the view of a component.</p>
@@ -25,7 +35,7 @@
           <p>Additional templates, represented by TemplateRef objects, can define alternative or embedded views, which can be referenced from multiple components.</p>   
       
       </div>
-      <div id="option2" *ngIf="options[1].selected">
+      <div id="option2" *ngIf="selectedOption === 'fornothing' && options[1].selected ">
          
           <b><p>Nothing</p></b>
               <p>Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.</p>
@@ -34,7 +44,7 @@
               <p>Tutorials and guides include downloadable examples to help you start your projects.</p>    
       
       </div>
-      <div id="option3" *ngIf="options[2].selected">
+      <div id="option3" *ngIf="selectedOption === 'forsomething' && options[2].selected">
         
         
         <b><p>something</p></b>
@@ -44,7 +54,7 @@
         <p>Tutorials and guides include downloadable examples to help you start your projects.</p>    
       
       </div>
-      <div id="option4" *ngIf="options[3].selected">
+      <div id="option4" *ngIf="selectedOption === 'forIntroduction' && options[3].selected">
        
         <b><p>Introduction</p></b>
         <p>Code that defines how to render the view of a component.</p>

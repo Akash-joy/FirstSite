@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class COMMUNITYComponent {
  selectall=false;
- 
+
   options = [
     { label: 'chapter 2', selected: false },
     { label: 'Nothing', selected: false },
@@ -20,6 +20,7 @@ export class COMMUNITYComponent {
   showDropdown = false;
 
   selectAll=false
+  selectedOption: string=' ';
   get selectedOptions(): string[] {
     return this.options.filter(option => option.selected).map(option => option.label);
   }
@@ -36,5 +37,8 @@ export class COMMUNITYComponent {
   onOptionChange() {
     this.selectAll = this.options.every(option => option.selected);
   }
-
+onOptionSelected(select:any){
+  this.selectedOption = select.target.value
+  console.log(this.selectedOption)
+}
 }
