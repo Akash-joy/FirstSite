@@ -1,1 +1,58 @@
-<br><br><br>    
+<div class="container">
+
+
+    <div class="multiselect-dropdown">
+        <div class="dropdown-toggle" (click)="toggleDropdown()">Select Options</div>
+        <div class="dropdown-menu" [hidden]="!showDropdown">
+           <label>
+            <input type="checkbox"  [(ngModel)]="selectAll" (change)="onSelectAll()">Select All
+           </label>
+          <label *ngFor="let option of options" class="option">
+            <input type="checkbox" [(ngModel)]="option.selected" (change)="onOptionChange()"> {{ option.label }}
+          </label>
+        </div>
+      </div>
+     
+      
+      <div class="content">
+        <div id="option1" *ngIf="options[0].selected">
+       
+          <h1>Chapter Two</h1>
+          <p>Code that defines how to render the view of a component.</p>
+          <p>A template combines straight HTML with Angular data-binding syntax, directives, and template expressions (logical constructs). The Angular elements insert or calculate values that modify the HTML elements before the page is displayed.</p><p> Learn more about Angular template language in the Template Syntax guide.</p>
+          <p> A template is associated with a component class through the @Component() decorator.</p>
+          <p> Learn more about Angular template language in the Template Syntax guide. </p>  Learn more about Angular template language in the Template Syntax guide.The template code can be provided inline, as the value of the template property, or in a separate HTML file linked through the templateUrl property.
+          <p>Additional templates, represented by TemplateRef objects, can define alternative or embedded views, which can be referenced from multiple components.</p>   
+      
+      </div>
+      <div id="option2" *ngIf="options[1].selected">
+         
+          <b><p>Nothing</p></b>
+              <p>Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.</p>
+              <p>These Angular docs help you learn and use the Angular framework and development platform, from your first application to 
+              complex single-page applications for enterprises.</p>
+              <p>Tutorials and guides include downloadable examples to help you start your projects.</p>    
+      
+      </div>
+      <div id="option3" *ngIf="options[2].selected">
+        
+        
+        <b><p>something</p></b>
+        <p>Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.</p>
+        <p>These Angular docs help you learn and use the Angular framework and development platform, from your first application to 
+        complex single-page applications for enterprises.</p>
+        <p>Tutorials and guides include downloadable examples to help you start your projects.</p>    
+      
+      </div>
+      <div id="option4" *ngIf="options[3].selected">
+       
+        <b><p>Introduction</p></b>
+        <p>Code that defines how to render the view of a component.</p>
+        <p>A template combines straight HTML with Angular data-binding syntax, directives, and template expressions (logical constructs). The Angular elements insert or calculate values that modify the HTML elements before the page is displayed.</p><p> Learn more about Angular template language in the Template Syntax guide.</p>
+        <p> A template is associated with a component class through the @Component() decorator.</p>
+        <p> Learn more about Angular template language in the Template Syntax guide. </p>  Learn more about Angular template language in the Template Syntax guide.The template code can be provided inline, as the value of the template property, or in a separate HTML file linked through the templateUrl property.
+        <p>Additional templates, represented by TemplateRef objects, can define alternative or embedded views, which can be referenced from multiple components.</p>
+      </div>
+      </div>
+        
+</div>

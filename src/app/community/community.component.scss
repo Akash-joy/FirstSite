@@ -1,0 +1,31 @@
+.container{
+  margin-top: 100px;
+}
+.multiselect-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.option {
+  display: block;
+  margin: 5px;
+}
+.content{
+  margin-top: 140px;
+}
