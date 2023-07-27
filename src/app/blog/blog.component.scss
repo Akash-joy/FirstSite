@@ -5,3 +5,23 @@
 .content{
     text-align: center;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  
+  thead th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  
+  tbody td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
