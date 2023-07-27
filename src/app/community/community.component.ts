@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./community.component.scss']
 })
 export class COMMUNITYComponent {
- selectall=false;
+ 
+ showDropdown = false;
+ selectAll=false
+  selectedOption: string=' ';
 
   options = [
     { label: 'chapter 2', selected: false },
@@ -17,17 +20,14 @@ export class COMMUNITYComponent {
     { label: 'intro', selected: false }
   ];
 
-  showDropdown = false;
-
-  selectAll=false
-  selectedOption: string=' ';
+    
   get selectedOptions(): string[] {
     return this.options.filter(option => option.selected).map(option => option.label);
   }
 
   toggleDropdown() {
     this.showDropdown = !this.showDropdown;
-    console.log(this.options[0].selected)
+
   }
  
   onSelectAll() {
@@ -39,6 +39,5 @@ export class COMMUNITYComponent {
   }
 onOptionSelected(select:any){
   this.selectedOption = select.target.value
-  console.log(this.selectedOption)
 }
 }
