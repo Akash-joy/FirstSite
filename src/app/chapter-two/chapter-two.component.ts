@@ -6,13 +6,13 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./chapter-two.component.scss']
 })
 export class ChapterTwoComponent {
-  searchElement(inputValue: string) {
+  searchElement(inputValue: string) { 
     const chapterOneContent = document.getElementById('chapter2')?.textContent?.toLowerCase(); 
   if(chapterOneContent){
     if (chapterOneContent.includes(inputValue.toLowerCase())) {
-      alert('Element found in Chapter One!');
+      alert('Element found in Chapter two!');
     } else {
-      alert('Element not found in Chapter One!');
+      alert('Element not found in Chapter two!');
     }
   }
   }
