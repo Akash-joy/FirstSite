@@ -30,9 +30,28 @@
   text-decoration: none;
 }
 
-.button{
+.button {
   margin-left: 57%;
   display: flex;
   align-items: center;
+}
+
+.button button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+  background-color: #2980b9;
+}
+
+.button button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
 }
 

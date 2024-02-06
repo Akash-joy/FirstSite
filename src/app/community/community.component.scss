@@ -1,15 +1,19 @@
-.container{
+.container {
   margin-top: 100px;
 }
+
 .multiselect-dropdown {
   position: relative;
   display: inline-block;
-  
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  margin-left: 10px;
 }
 
 .dropdown-toggle {
-  padding: 5px 10px;
-  background-color: #f0f0f0;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -17,25 +21,37 @@
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 5px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #3498db;
   z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex; /* Use flex display for the fieldset */
+  align-items: center; /* Center items vertically */
 }
 
 .option {
   display: block;
-  margin: 5px;
+  margin: 10px 0;
 }
-.content{
+
+.justdrop select {
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.selectors {
+  display: flex; /* Use flex display for the container */
+  align-items: center; /* Center items vertically */
+}
+
+.content {
   margin-top: 140px;
-}
-.justdrop select{
-  border: none;
-}
-
-
-
-.selectors{
-  display: flex;
 }

@@ -1,27 +1,33 @@
 <div class="container">
     <div class="selectors">
-
-       <div class="justdrop">
-         <select (change)="onOptionSelected($event)">
-          <option value="forchapter">--select--</option>
-             <option value="forchapter">Chapter 2</option>
-             <option value="fornothing">Nothing </option>
-             <option value="forsomething">something </option>
-             <option value="forIntroduction">Introduction </option>
-         </select>
-       </div>
-
-        <div class="multiselect-dropdown">
-         <div class="dropdown-toggle" (click)="toggleDropdown()">Chapter contents</div>
-           <div class="dropdown-menu" [hidden]="!showDropdown">
-             <label>
-               <input type="checkbox"  [(ngModel)]="selectAll" (change)="onSelectAll()">Select All
-             </label>
-             <label *ngFor="let option of options" class="option">
-               <input type="checkbox" [(ngModel)]="option.selected" (change)="onOptionChange()"> {{ option.label }}
-            </label>
-         </div>
+      <fieldset>
+        <legend><h3>Select same in both</h3></legend>
+        <div class="justdrop">
+          <select (change)="onOptionSelected($event)">
+           <option value="forchapter">--select--</option>
+              <option value="forchapter">Chapter 2</option>
+              <option value="fornothing">Nothing </option>
+              <option value="forsomething">something </option>
+              <option value="forIntroduction">Introduction </option>
+          </select>
         </div>
+        <div class="multiselect-dropdown">
+          <div class="dropdown-toggle" (click)="toggleDropdown()">Chapter contents</div>
+            <div class="dropdown-menu" [hidden]="!showDropdown">
+              <label>
+                <input type="checkbox"  [(ngModel)]="selectAll" (change)="onSelectAll()">Select All
+              </label>
+              <label *ngFor="let option of options" class="option">
+                <input type="checkbox" [(ngModel)]="option.selected" (change)="onOptionChange()"> {{ option.label }}
+             </label>
+          </div>
+         </div>
+      </fieldset>
+
+
+     
+
+       
 
     </div>
       
